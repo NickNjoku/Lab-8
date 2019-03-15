@@ -7,9 +7,9 @@ public class Driver {
 		
 		GamePieceAppearance c = new GamePieceAppearance(Color.RED, Shape.RACECAR);
 		
+		GamePiece a = GamePiece.RED_RACER;
 		
-		
-		System.out.println(c.toString());
+		System.out.println(a.toString());
 
 	}
 
