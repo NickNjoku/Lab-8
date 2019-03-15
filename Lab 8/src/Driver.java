@@ -19,6 +19,8 @@ public class Driver {
 		System.out.println(n.getPlayerWithGamePiece(a));
 		
 		System.out.println(n.addPlayer("Nick", b, Location.BALLROOM));
+		
+		System.out.println(n.getPlayerGamePiece("Nick"));
 
 	}
 

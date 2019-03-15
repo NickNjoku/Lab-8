@@ -17,8 +17,13 @@ public class Todo {/*
 	9. Create GamePiece enum (make constants and private fields)
 	10. Make GamePiece constructor 
 	11. Make getters for Color and Shape in GamePiece enum
-	12. Create movesFirst method for GamePiece
-	13. Make toString method for GamePiece
+	12. Create movesFirst method for GamePiece enum
+	13. Make toString method for GamePiece enum
+	14. Create BoardGame class and make protected fields
+	15. Make constructor for BoardGame class
+	16. Make addPlayer method for BoardGame class
+	17. Make getPlayerGamePiece method for BoardGame class
+	18. Make getPlaterWithGamePiece for BoardGame class
 	
 
 	Estimated Time (minutes):
@@ -35,6 +40,11 @@ public class Todo {/*
 	11. 1
 	12. 6
 	13. 2
+	14. 4
+	15. 1
+	16. 5
+	17. 5
+	18. 6
 	
 	
 
@@ -52,6 +62,11 @@ public class Todo {/*
 	11. 1
 	12. 5
 	13. 2
+	14. 3
+	15. 3
+	16. 6
+	17. 4
+	18. 30
 	
 
 */}
