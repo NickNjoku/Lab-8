@@ -47,7 +47,16 @@ public class BoardGame {
 		}
 		
 		return null;
-		
+	}
+	
+	public void movePlayer(String playerName, Location newLocation)
+	{
+		playerLocation.put(playerName, newLocation);
+	}
+	
+	public String[] moveTwoPlayers(String [] playerNames, Location[] newLocations)
+	{
+		if()
 	}
 	
 	
