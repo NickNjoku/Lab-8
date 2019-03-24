@@ -15,11 +15,11 @@ public class Driver {
 		
 		BoardGame n = new BoardGame();
 		
-		n.addPlayer("Nick", a, Location.BALLROOM);
+		n.addPlayer("Nick", b, Location.BALLROOM);
 		
 		//System.out.println(n.getPlayerWithGamePiece(a));
 		
-		n.addPlayer("Tom", b, Location.BALLROOM);
+		n.addPlayer("Tom", a, Location.BALLROOM);
 		
 		//System.out.println(n.getPlayerGamePiece("Tom"));
 		//System.out.println(n.getPlayerWithGamePiece(b));
@@ -30,7 +30,19 @@ public class Driver {
 		
 		//System.out.println(d.toString());
 		//System.out.println(a.movesFirst(a, b));
-		System.out.println(d.movesFirst(d, b));
+		//System.out.println(d.movesFirst(d, b));
+		
+		String[] playerNames = new String[2]; 
+		Location[] newLocations = new Location[2];
+		
+		playerNames[0] = "Tom";
+		playerNames[1] = "Nick";
+		newLocations[0] = Location.HALL;
+		newLocations[1] = Location.LOUNGE;
+		n.moveTwoPlayers(playerNames, newLocations);
+		
+		
+		System.out.println(n.getPlayersLocation("Nick"));
 		
 
 	}

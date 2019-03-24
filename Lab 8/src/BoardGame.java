@@ -1,5 +1,7 @@
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
+import java.util.Set;
 
 public class BoardGame {
 	
@@ -56,9 +58,71 @@ public class BoardGame {
 	
 	public String[] moveTwoPlayers(String [] playerNames, Location[] newLocations)
 	{
-		if()
+		ArrayList <GamePiece> p = new ArrayList <GamePiece>();
+		for(GamePiece g : playerPieces.values())
+		{
+			p.add(g);
+			
+		}
+		
+		if(p.get(0).movesFirst(p.get(0), p.get(1)).equals(p.get(0)))
+		{
+			playerNames[0] = getPlayerWithGamePiece(p.get(0));
+			playerNames[1] = getPlayerWithGamePiece(p.get(1));
+			movePlayer(playerNames[0], newLocations[0]);
+			movePlayer(playerNames[1], newLocations[1]);
+			
+		}
+		else
+		{
+			playerNames[0] = getPlayerWithGamePiece(p.get(1));
+			playerNames[1] = getPlayerWithGamePiece(p.get(0));
+			Location temp = newLocations[0];
+			newLocations[0] = newLocations[1];
+			newLocations[1] = temp;
+			
+			movePlayer(playerNames[0], newLocations[0]);
+			movePlayer(playerNames[1], newLocations[1]);
+		}
+		
+		return playerNames;
 	}
 	
+	public Location getPlayersLocation(String player)
+	{
+		return playerLocation.get(player);
+		
+	}
+	
+	public ArrayList<GamePiece> getPlayersAtLocation(Location loc)
+	{
+		ArrayList <GamePiece> piece = new ArrayList<GamePiece>();
+		
+		for(GamePiece g : playerLocation.values())
+		{
+			
+		}
+	}
+	
+	public ArrayList<GamePiece> getGamePiecesAtLocation(Location loc)
+	{
+		
+	}
+	
+	public Set<String> getPlayers()
+	{
+		
+	}
+	
+	public Set<Location> getPlayerLocation()
+	{
+		
+	}
+	
+	public Set<GamePiece> getPlayerPieces()
+	{
+		
+	}
 	
 	
 	
