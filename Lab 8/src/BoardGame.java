@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -94,24 +95,45 @@ public class BoardGame {
 		
 	}
 	
-	public ArrayList<GamePiece> getPlayersAtLocation(Location loc)
+	public ArrayList<String> getPlayersAtLocation(Location loc)
 	{
-		ArrayList <GamePiece> piece = new ArrayList<GamePiece>();
+		ArrayList <String> piece = new ArrayList<String>();
 		
-		for(GamePiece g : playerLocation.values())
+		for(Entry<String, Location> n : playerLocation.entrySet())
 		{
-			
+			if(n.getValue().equals(loc))
+			{
+				piece.add(n.getKey());
+			}
 		}
+		
+		return piece;
 	}
 	
 	public ArrayList<GamePiece> getGamePiecesAtLocation(Location loc)
 	{
+		ArrayList <GamePiece> piece = new ArrayList<GamePiece>();
 		
+		for(Entry<String, Location> n : playerLocation.entrySet())
+		{
+			if(n.getValue().equals(loc))
+			{
+				piece.add(getPlayerGamePiece(n.getKey()));
+			}
+		}
+		
+		return piece;
 	}
 	
 	public Set<String> getPlayers()
 	{
+		Set <String> players = new HashSet <String>();
+		for(Entry<String, GamePiece> n : playerPieces.entrySet())
+		{
+			players.add(n.getKey());
+		}
 		
+		return players;
 	}
 	
 	public Set<Location> getPlayerLocation()

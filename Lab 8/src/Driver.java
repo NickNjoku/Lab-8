@@ -20,12 +20,13 @@ public class Driver {
 		//System.out.println(n.getPlayerWithGamePiece(a));
 		
 		n.addPlayer("Tom", a, Location.BALLROOM);
+		n.addPlayer("Eric", d, Location.HALL);
 		
 		//System.out.println(n.getPlayerGamePiece("Tom"));
 		//System.out.println(n.getPlayerWithGamePiece(b));
 		
 		n.movePlayer("Nick", Location.BILLIARD_ROOM);
-		n.movePlayer("Eric", Location.CONSERVATORY);
+		//n.movePlayer("Eric", Location.CONSERVATORY);
 		
 		
 		//System.out.println(d.toString());
@@ -42,7 +43,10 @@ public class Driver {
 		n.moveTwoPlayers(playerNames, newLocations);
 		
 		
-		System.out.println(n.getPlayersLocation("Nick"));
+		//System.out.println(n.getPlayersLocation("Nick"));
+		//System.out.println(n.getPlayersAtLocation(Location.HALL));
+		//System.out.println(n.getGamePiecesAtLocation(Location.HALL));
+		System.out.println(n.getPlayers());
 		
 
 	}

@@ -23,7 +23,12 @@ public class Todo {/*
 	15. Make constructor for BoardGame class
 	16. Make addPlayer method for BoardGame class
 	17. Make getPlayerGamePiece method for BoardGame class
-	18. Make getPlaterWithGamePiece for BoardGame class
+	18. Make getPlayerWithGamePiece for BoardGame class
+	19. Make movePlayer method for BoardGame class
+	20. Make moveTwoPlayers method for BoardGame class
+	21. Make getPlayersLocation method for BoardGame class
+	22. Make getPlayersAtLocation method for BoardGame class
+	23. Make getPlayers method for BoardGame class
 	
 
 	Estimated Time (minutes):
@@ -45,7 +50,11 @@ public class Todo {/*
 	16. 5
 	17. 5
 	18. 6
-	
+	19. 6
+	20. 15
+	21. 6
+	22. 15
+	23. 5
 	
 
 	Actual Time (minutes):
@@ -67,6 +76,10 @@ public class Todo {/*
 	16. 6
 	17. 4
 	18. 30
-	
+	19. 5
+	20. 35
+	21. 4
+	22. 10
+	23. 5
 
 */}
