@@ -7,13 +7,13 @@ import java.util.Set;
 public class BoardGame {
 	
 	protected LinkedHashMap<String, GamePiece> playerPieces;
-	protected LinkedHashMap<String, Location> playerLocation;
+	protected LinkedHashMap<String, Location> playerLocations;
 	
 	
 	public BoardGame()
 	{
 		this.playerPieces =  new LinkedHashMap<String, GamePiece>();
-		this.playerLocation = new LinkedHashMap<String, Location>();
+		this.playerLocations = new LinkedHashMap<String, Location>();
 	}
 	
 	public boolean addPlayer(String playerName, GamePiece gamePiece, Location initialLocation)
@@ -21,7 +21,7 @@ public class BoardGame {
 		if(!(playerPieces.containsKey(playerName)))
 		{
 			playerPieces.put(playerName, gamePiece);
-			playerLocation.put(playerName, initialLocation);
+			playerLocations.put(playerName, initialLocation);
 			
 			return true;
 		}
@@ -54,7 +54,7 @@ public class BoardGame {
 	
 	public void movePlayer(String playerName, Location newLocation)
 	{
-		playerLocation.put(playerName, newLocation);
+		playerLocations.put(playerName, newLocation);
 	}
 	
 	public String[] moveTwoPlayers(String [] playerNames, Location[] newLocations)
@@ -91,7 +91,7 @@ public class BoardGame {
 	
 	public Location getPlayersLocation(String player)
 	{
-		return playerLocation.get(player);
+		return playerLocations.get(player);
 		
 	}
 	
@@ -99,7 +99,7 @@ public class BoardGame {
 	{
 		ArrayList <String> piece = new ArrayList<String>();
 		
-		for(Entry<String, Location> n : playerLocation.entrySet())
+		for(Entry<String, Location> n : playerLocations.entrySet())
 		{
 			if(n.getValue().equals(loc))
 			{
@@ -114,7 +114,7 @@ public class BoardGame {
 	{
 		ArrayList <GamePiece> piece = new ArrayList<GamePiece>();
 		
-		for(Entry<String, Location> n : playerLocation.entrySet())
+		for(Entry<String, Location> n : playerLocations.entrySet())
 		{
 			if(n.getValue().equals(loc))
 			{
@@ -136,14 +136,27 @@ public class BoardGame {
 		return players;
 	}
 	
-	public Set<Location> getPlayerLocation()
+	public Set<Location> getPlayerLocations()
 	{
+		Set <Location> locations = new HashSet <Location>();
+		for(Entry<String, Location> n : playerLocations.entrySet())
+		{
+			locations.add(n.getValue());
+		}
+		
+		return locations;
 		
 	}
 	
 	public Set<GamePiece> getPlayerPieces()
 	{
+		Set <GamePiece> pieces = new HashSet <GamePiece>();
+		for(Entry<String, GamePiece> n : playerPieces.entrySet())
+		{
+			pieces.add(n.getValue());
+		}
 		
+		return pieces;
 	}
 	
 	

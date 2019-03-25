@@ -29,6 +29,9 @@ public class Todo {/*
 	21. Make getPlayersLocation method for BoardGame class
 	22. Make getPlayersAtLocation method for BoardGame class
 	23. Make getPlayers method for BoardGame class
+	24. Make getPlayerLocations method for BoardGame class
+	25. Make getPlayerPieces method for BoardGame class
+	26. Create test class for BoardGame class
 	
 
 	Estimated Time (minutes):
@@ -55,6 +58,8 @@ public class Todo {/*
 	21. 6
 	22. 15
 	23. 5
+	24. 5
+	25. 5
 	
 
 	Actual Time (minutes):
@@ -81,5 +86,7 @@ public class Todo {/*
 	21. 4
 	22. 10
 	23. 5
+	24. 5
+	25. 5
 
 */}
